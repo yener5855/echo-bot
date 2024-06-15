@@ -12,5 +12,5 @@ jobs:
       run: |
         cd
         git init
-        git pull git@github.com:yener5855/echo-bot.git
+        git pull https://github.com/yener5855/echo-bot.git
         npm i
