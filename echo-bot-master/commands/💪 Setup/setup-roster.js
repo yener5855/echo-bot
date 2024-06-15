@@ -138,13 +138,13 @@ module.exports = {
         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         let used1 = false;
         //send the menu msg
-        let menumsg = await message.reply({embeds: [MenuEmbed], components: [row1, row2, row3, row4]})
+        let menumsg = await message.reply({embeds: [MenuEmbed], components: [row1, row2, row3, row4]});
         //function to handle the menuselection
         function menuselection(menu) {
           let menuoptiondata = menuoptions.find(v=>v.value == menu?.values[0])
           if(menu?.values[0] == "Cancel") return menu?.reply(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable3"]))
           menu?.deferUpdate();
-          let SetupNumber = menu?.values[0].split(" ")[0]
+          let SetupNumber = menu?.values[0].split("1")[0]
           pre = `roster${SetupNumber}`;
           used1 = true;
           second_layer(SetupNumber, menuoptiondata)

@@ -82,7 +82,7 @@ module.exports = {
           .setAuthor('Rank Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/page-with-curl_1f4c3.png', 'https://discord.com/invite/Yfb2fnkduE')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
-        let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
+        let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]});
         //Create the collector
         const collector = menumsg.createMessageComponentCollector({ 
           filter: i => i?.isSelectMenu() && i?.message.author.id == client.user.id && i?.user,

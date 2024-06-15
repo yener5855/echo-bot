@@ -76,7 +76,7 @@ module.exports = {
           "https://discord.com/invite/Yfb2fnkduE")
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-anticaps"]["variable1"]))
         //send the menu msg
-        let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
+        let menumsg = await message.reply({ embeds: [MenuEmbed], components: [new MessageActionRow().addComponents([Selection])] });
         //Create the collector
         const collector = menumsg.createMessageComponentCollector({ 
           filter: i => i?.isSelectMenu() && i?.message.author.id == client.user.id && i?.user,

@@ -26,7 +26,7 @@ module.exports = {
     let theemoji = "📜";
     let yenerGuild = client.guilds.cache.get("773668217163218944");
     if (yenerGuild) theemoji = "📜";
-    let allbuttons = [new MessageActionRow().addComponents([new MessageButton().setStyle('SUCCESS').setEmoji(📜).setCustomId("User_Apply").setLabel("Apply")])]
+    let allbuttons = [new MessageActionRow().addComponents([new MessageButton().setStyle('SUCCESS').setEmoji("📜").setCustomId("User_Apply").setLabel("Apply")])]
     let es = client.settings.get(message.guild.id, "embed");
     let ls = client.settings.get(message.guild.id, "language")
     let apply_for_here = client.apply;
@@ -354,7 +354,7 @@ module.exports = {
           .setAuthor(SetupNumber + " Apply Setup", "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/282/incoming-envelope_1f4e8.png", "https://discord.com/invite/Yfb2fnkduE")
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable4"]))
         //send the menu msg
-        let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
+        let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]});
         //Create the collector
         const collector = menumsg.createMessageComponentCollector({ 
           filter: i => i?.isSelectMenu() && i?.message.author.id == client.user.id && i?.user,
