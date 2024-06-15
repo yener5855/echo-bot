@@ -20,5 +20,5 @@ jobs:
         git pull https://github.com/yener5855/echo-bot.git
 =======
         git pull git@github.com:yener5855/echo-bot.git
->>>>>>> Stashed changes
+>>>>>>> Stashed 
         npm i
